@@ -12,6 +12,7 @@ Note that it's critical to change networkfuzzer.conf file by changing in "forwar
 At first there were used two different .xml rules to fuzz packets from a PCAP file: 
 - The first one takes a valid NGAP packet, forwards it, then creates three versions of the same packet by changing a specific attribute with a random value in a defined range each time (fuzzNGAPvalues.xml);
 - The second one replaces the first 20 bytes of the packet's NGAP protocol with a random buffer (fuzzNGAPpackets.xml).
+
 To activate a rule, it's needed to compile the .xml file, thereby creating the .so file; to change the fuzzing rule, the .so file was deleted and the other rule was compiled. With the info command, it is possible to check which rules are considered by the fuzzer.
 
 To make the release, a .sh file was created (run_amf_fuzz_tests.sh), a benchmarking script that starts NetworkFuzzer by using different values of copies sent for each packet (10, 100, 500, 1000, 5000 and 8000) and periodically records the CPU and memory usage of the AMF by saving it in a CSV file.
