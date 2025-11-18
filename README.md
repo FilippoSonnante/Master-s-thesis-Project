@@ -9,7 +9,7 @@ Note that it's critical to change networkfuzzer.conf file by changing in "forwar
         target-hosts     = { "127.0.0.5" }
         target-ports     = { 38412 }       # port SCTP for NGAP
 
-At first there were used two different .xml rules to fuzz packets from a [pcap file](PCAP_file/5g-sa.pcap): 
+At first there were used two different .xml rules to fuzz packets from a [pcap file](PCAP_File/5g-sa.pcap): 
 - The first one takes a valid NGAP packet, forwards it, then creates three versions of the same packet by changing a specific attribute with a random value in a defined range each time (fuzzNGAPvalues.xml);
 - The second one replaces the first 20 bytes of the packet's NGAP protocol with a random buffer (fuzzNGAPpackets.xml).
 
