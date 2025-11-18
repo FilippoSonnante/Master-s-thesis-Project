@@ -18,11 +18,17 @@ To make the release, a .sh file was created (run_amf_fuzz_tests.sh), a benchmark
 
 Using a MATLAB script (AMFUsageDataAnalysis.m), the data collected in the.csv files were analyzed, noting that only a small portion of the 4 GB of memory was exploited by the AMF, making it impossible to obtain a denial of service, however, it was still possible to note that the second fuzzing rule produced greater memory and CPU usage by the AMF.
 
-Given the higher usage of CPU and Memory, the second fuzzing rule was chosen and memory limits for the AMF of 80, 100, 250 and 500 MB respectively were set; to change the memory limit it must be used command "sudo systemctl edit open5gs-amfd.service", and must be added
-[Service]
-MemoryMax=500M # here must be choose the memory limit
-MemorySwapMax=0
-Restart=no
+Given the higher usage of CPU and Memory, the second fuzzing rule was chosen and memory limits for the AMF of 80, 100, 250 and 500 MB respectively were set; to change the memory limit it must be used command
+
+         sudo systemctl edit open5gs-amfd.service
+
+and must be added
+
+        [Service]
+        MemoryMax=500M # here must be choose the memory limit
+        MemorySwapMax=0
+        Restart=no
+
 to ovverride the configuration file.
  
 Also in this case, thanks to the .sh file, the fuzzer command was launched by varying the number of copies sent for each file; specifically, for each MemoryLimit, 5 different tests were performed, thus obtaining 5 .csv files for each limit. In this case too, the data obtained were analyzed using a MATLAB script (MemoryLimitCompare.m).
