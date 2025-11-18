@@ -1,0 +1,1 @@
+This folder contains MATLAB scripts to analize the csv file obtained from tests.
