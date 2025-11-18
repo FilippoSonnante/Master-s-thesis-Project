@@ -10,8 +10,8 @@ Note that it's critical to change networkfuzzer.conf file by changing in "forwar
         target-ports     = { 38412 }       # port SCTP for NGAP
 
 At first there were used two different .xml rules to fuzz packets from a [pcap file](PCAP_File/5g-sa.pcap): 
-- The first one takes a valid NGAP packet, forwards it, then creates three versions of the same packet by changing a specific attribute with a random value in a defined range each time (fuzzNGAPvalues.xml);
-- The second one replaces the first 20 bytes of the packet's NGAP protocol with a random buffer (fuzzNGAPpackets.xml).
+- The [first one](XML_Rules/fuzzNGAPvalues.xml) takes a valid NGAP packet, forwards it, then creates three versions of the same packet by changing a specific attribute with a random value in a defined range each time;
+- The [second one](XML_Rules/fuzzNGAPpackets.xml) replaces the first 20 bytes of the packet's NGAP protocol with a random buffer.
 
 To activate a rule, it's needed to compile the .xml file, thereby creating the .so file; to change the fuzzing rule, the .so file was deleted and the other rule was compiled. With the info command, it is possible to check which rules are considered by the fuzzer.
 
