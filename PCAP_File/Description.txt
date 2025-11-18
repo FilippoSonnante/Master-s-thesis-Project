@@ -1,0 +1,1 @@
+This folder contains the pcap file (in the VM the pcap was saved in separeted folder /home/filippo/pcap/5g-sa.pcap)
