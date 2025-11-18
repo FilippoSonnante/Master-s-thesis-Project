@@ -1,0 +1,1 @@
+This folder contains the .sh file used to run automatically NetworkFuzzer.
