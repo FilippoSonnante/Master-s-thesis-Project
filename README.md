@@ -1,7 +1,7 @@
 # Master-s-thesis-Project
 Fuzzing to Open5Gs AMF with the intent to create a Denial of Service.
 
-Starting from known vulnerabilities of the Open5Gs AMF in version 2.3.2, the objective of this project is to carry out a denial of service at the actual version of Open5Gs, by replaying fuzzed NGAP packets thanks to the tool NetworkFuzzer. In this case, VMware was used to simulate a virtual machine running Ubuntu 22.04; the virtual machine also has 4 GB of memory, 2 processors and 25 GB of hard disk drive.
+Starting from known vulnerabilities of the Open5Gs AMF in version 2.3.2, the objective of this project is to carry out a denial of service at the actual version of Open5Gs, by replaying fuzzed NGAP packets thanks to the tool [NetworkFuzzer](https://github.com/Montimage/NetworkFuzzer). In this case, VMware was used to simulate a virtual machine running Ubuntu 22.04; the virtual machine also has 4 GB of memory, 2 processors and 25 GB of hard disk drive.
 Open5Gs and NetworkFuzzer could be downloaded by following tutorials on their GitHub pages. 
 Note that it's critical to change networkfuzzer.conf file by changing in "forward" section:
 
