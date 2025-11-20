@@ -28,7 +28,7 @@ for X = X_values
         filename = sprintf('amf_cpu_log%dM_%d.csv', X, Y);
         
         if ~isfile(filename)
-            fprintf('⚠️ File not found: %s\n', filename);
+            fprintf('File not found: %s\n', filename);
             continue;
         end
         
@@ -192,3 +192,4 @@ end
 end
 
 fprintf('\n==== ALL TABLES AND GRAPHS GENERATED ====\n');
+
