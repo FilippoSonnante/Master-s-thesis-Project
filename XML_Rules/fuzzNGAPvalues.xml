@@ -1,4 +1,4 @@
-beginning>
+<beginning>
 <embedded_functions><![CDATA[
 //initialize random seed when loading this rule file
 void on_load(){
